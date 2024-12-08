@@ -1,3 +1,7 @@
+.section {
+  padding: 10px 10px 10px 10px;
+}
+
 #Q {
   background-color: honeydew;
 }
@@ -8,14 +12,23 @@
 
 #C {
   background-color: lightpink;
+
 }
 
 #R {
   background-color: lightgoldenrodyellow;
 }
 
+.approved {
+  color: green;
+}
+
+.rejected {
+  color: red;
+}
+
 #Grid {
-  transition: all 1s;
+  transition: all 1s allow-discrete;
 
   width: 100vw;
   height: 100vh;
@@ -30,8 +43,15 @@
   }
 
   #A {
+    textarea {
+      width: 100%;
+      height: 1.5em;
+      resize: none;
+      font-size: 1em;
+    }
+
     grid-column: 1;
-    grid-row: 2;  
+    grid-row: 2;
   }
 
   #C {
@@ -52,17 +72,25 @@
       grid-column: 1/3;
       grid-row: 1;
     }
-  
+
     #A {
+      textarea {
+        height: 5em;
+      }
+
       grid-column: 1/3;
-      grid-row: 2;  
+      grid-row: 2;
     }
-  
+
     #C {
       grid-column: 1;
       grid-row: 3;
+
+      .rejected {
+        display: none;
+      }
     }
-  
+
     #R {
       grid-column: 2;
       grid-row: 3;
